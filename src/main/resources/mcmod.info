@@ -5,10 +5,10 @@
   "description": "Make InvHUD+ configurable.",
   "version": "1.0.0",
   "mcversion": "1.12.2",
-  "url": "",
+  "url": "https://github.com/Open-KFC/InvHUD_Configurable",
   "updateUrl": "",
   "authorList": ["OpenKFC"],
-  "credits": "fonnymunkey(the CustomConfigHandler cold was copied from MaterialTweaker)",
+  "credits": "fonnymunkey(the CustomConfigHandler code was copied from MaterialTweaker)",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
