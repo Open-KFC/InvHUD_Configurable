@@ -2,7 +2,7 @@
 
 Please note, after cloning the repository, you need to manually download the InventoryHUD-1.12.2.forge-3.4.4.jar file and place it into a manually created libs folder (refer to build.gradle-line 64). This step is essential to ensure the project runs smoothly, Thank you for your contributions to my development efforts.
 
-克隆仓库后，请下载InventoryHUD-1.12.2.forge-3.4.4.jar并将其置于手动新建的libs文件夹，麻烦了……
+克隆仓库后，请下载InventoryHUD-1.12.2.forge-3.4.4.jar并将其置于手动新建的libs文件夹（见build.gradle-line64），麻烦了……
 
 Download Link：https://www.curseforge.com/minecraft/mc-mods/inventory-hud-forge/files/3565980
 
