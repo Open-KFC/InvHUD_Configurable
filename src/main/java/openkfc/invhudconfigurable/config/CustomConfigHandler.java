@@ -32,7 +32,7 @@ public class CustomConfigHandler {
         initIconMod();
     }
 
-    /*Try to create the json Folder*/
+    /*Try to create the Folder*/
     private static boolean initDirectory(){
         configFolder = new File("config", InvHUD_Configurable.MODID);
         if(!configFolder.exists() || !configFolder.isDirectory()){
@@ -44,7 +44,7 @@ public class CustomConfigHandler {
         return true;
     }
 
-    /*Create&write iconMod.cfg and read it*/
+    /*Create&write iconMod.cfg and read it to iconModMap*/
     private static void initIconMod(){
         if(configFolder == null && !initDirectory()) return;
         iconModFile = new File(configFolder,"iconMod.cfg");

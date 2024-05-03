@@ -22,7 +22,7 @@ import java.util.Map;
 public class InvHUD_Configurable {
     public static final String MODID = "invhud_configurable";
     public static final String NAME = "InvHUD_Configurable";
-    public static final String VERSION = "1.0.0";
+    public static final String VERSION = "1.0.1";
     public static final String DEPENDENCIES = "required-after:inventoryhud";
 
     public static Logger logger = LogManager.getLogger(MODID);
@@ -32,14 +32,17 @@ public class InvHUD_Configurable {
 
     @Mod.EventHandler
     public static void postInit(FMLPostInitializationEvent event){
-        logINFO("postInit");
+        logDEBUG("postInit");
         CustomConfigHandler.init();
         writeToPotionUtils(CustomConfigHandler.iconModMap);
     }
 
+    /*Write a map<modid,ModWithPotions> to dlovin.inventoryhud.utils.potions.PotionUtils*/
     public static void writeToPotionUtils(Map<String, CustomMod> mapIn){
         for (Map.Entry<String, CustomMod> entry : mapIn.entrySet()) {
             if(Loader.isModLoaded(entry.getKey())) {
+                if(!entry.getValue().haveNamingRule())
+                    logWARN("Loaded a no-namingRule mod, may some effects can't display correctly : " + entry.getKey());
                 PotionUtils.addMod(entry.getKey(), entry.getValue());
                 logINFO("Successfully write to PotionUtils : " + entry.getKey());
             }
@@ -48,6 +51,10 @@ public class InvHUD_Configurable {
 
     public static void logINFO(String message){
         logger.log(Level.INFO,NAME + " : " + message);
+    }
+
+    public static void logDEBUG(String message){
+        logger.log(Level.DEBUG,NAME + " : " + message);
     }
 
     public static void logWARN(String message){
